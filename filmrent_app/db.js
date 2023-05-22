@@ -7,7 +7,7 @@ function configureDB() {
     user: 'postgres',
     host: 'localhost',
     database: 'data_rent',
-    password: '1324',
+    password: 'giulisa',
     port: 5432,
   });
 

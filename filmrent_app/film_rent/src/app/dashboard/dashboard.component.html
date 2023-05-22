@@ -1,0 +1,24 @@
+<section class="start" >
+  <cdk-virtual-scroll-viewport itemSize="20" class="viewport">
+    <!--<app-film *cdkVirtualFor="let film of films" [film]="film" class="item"></app-film> -->
+    <mat-card class="item" *cdkVirtualFor="let film of films">
+      <mat-card-header>
+        <mat-card-title>
+          <button mat-raised-button (click)="film_details()">
+            <a routerLink="film_details"> {{film.title }} </a>
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ film.description }}</p>
+        <p>Anno: {{ film.release_year }}</p>
+        <p>{{ film.rating }}</p>
+        <p>{{ film.rental_rate}}</p>
+        <!-- Altri dettagli del film -->
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button (click)="noleggia()">NOLEGGIA</button>
+      </mat-card-actions>
+    </mat-card>
+  </cdk-virtual-scroll-viewport>
+</section>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'film_rent';
+  onLoginSuccess() {
+    // Dopo il login avvenuto con successo, abilita il bottone nella toolbar
+    // Chiamando il metodo enableButton() della componente ToolbarComponent
+  }
+
 }
